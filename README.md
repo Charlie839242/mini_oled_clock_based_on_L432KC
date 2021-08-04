@@ -1,6 +1,8 @@
 # mini_oled_clock_based_on_L432KC
 The oled screen can display time, humidity and temperature on the basis of a multi-thread OS, RT-Thread.
 
+![image](https://github.com/Charlie839242/mini_oled_clock_based_on_L432KC/blob/main/video/mini_oled_clock.gif)
+
   5 things were used: L432KC, SHT30(Temeprature Sensor), ESP8266(WIFI modular), OLED screen(1306 driver), CH340(UART communication with computer)
 	1.SHT30：
 		SHT30 communicates through I2C. occupying the I2C1 on L432KC.
