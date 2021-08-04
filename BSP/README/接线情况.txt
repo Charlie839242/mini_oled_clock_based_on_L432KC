@@ -1,0 +1,14 @@
+总共用到了五样东西。L432KC，SHT30（温度湿度传感器），ESP8266（WIFI模块），OLED屏幕（1306驱动）和CH340
+（用于和电脑的串口通信）。
+	1.SHT30：
+		SHT30采用I2C通信，占用了L432KC上面的I2C1.
+		即SHT30的sda连接PB7(D4),scl连接PB6(D5).
+	2.CH340:
+		CH340一端与PC连接，另一端采用串口通信，占用了L432KC上面的UART1。
+		即RXD与PA9(D1)连接，TXD与PA10(D0)连接。
+	3.ESP8266：
+		ESP8266采用UART通信，占用了L432KC上面的UART2.
+		即TXD与PA3(A2)连接，RXD与PA2(A7)连接。
+	4.OLED屏幕：
+		OLED采用I2C通信，占用了L432KC上面的I2C3.
+		即sda与PB4(D12)连接，scl与PA7(A6)连接。

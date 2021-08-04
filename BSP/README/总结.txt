@@ -1,0 +1,40 @@
+1.如何配置外部时钟？
+	未解决。
+	配置了外部时钟后rt_thread_mdelay(1000)和HAL_Delay变得很奇怪。
+		
+
+2.如何配置I2C？
+	在RT-Thread Setting中勾选‘软件I2C’后，drv_soft_i2c.c和drv_soft_i2c.h中的代码已是完整的，不需要再修改。
+	配置I2Cx的使能以及其对应的引脚，我们只需要在board.h中添加相关宏定义。
+	
+	在drv_soft_i2c.c:
+	#if !defined(BSP_USING_I2C1) && !defined(BSP_USING_I2C2)暗示了我们定义BSP_USING_I2Cx
+	
+	在drv_soft_i2c.h:
+	#define I2C1_BUS_CONFIG                                  
+    	{                                                    
+        	.scl = BSP_I2C1_SCL_PIN,                         
+        	.sda = BSP_I2C1_SDA_PIN,                         
+        	.bus_name = "i2c1",                              
+    	}
+	暗示了我们定义BSP_I2C1_SCL_PIN和BSP_I2C1_SDA_PIN
+	
+	
+	例如：我们要使用板子上的I2C1来进行通信，在L432KC上也就是PB6(SCL)和PB7(SDA)：
+	我们只需要在board.h中添加：
+	/* HUMAN-ADD*/
+	#ifndef BSP_USING_I2C1
+	#define BSP_USING_I2C1
+	#endif
+
+	#ifdef BSP_USING_I2C1
+	#define BSP_I2C1_SCL_PIN    GET_PIN(B, 6)
+	#define BSP_I2C1_SDA_PIN    GET_PIN(B, 7)
+	#endif
+
+3.关于ESP8266的WIFI名称和WIFI密码，直接在RT-Thread Studio里的软件包设置中进行配置。
+
+4.关于通过网卡名称来获取网卡:
+	为什么ESP8266的网卡名称是esp0？
+
+
