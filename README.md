@@ -16,6 +16,7 @@ The oled screen can display time, humidity and temperature on the basis of a mul
 		That is, sda connects to PB4(D12)，scl connects to PA7(A6).
     
 # How to use
+  The 'application' folder is where codes are written.
   Open the BSP folder by 'RT-Thread Studio'. To run it on your own L432KC or other things, there is one thing that should be modified before compiling and downloading.
     1.Configure the ESP8266.
       Since a new WIFI is used, some information about the WIFI name and WIFI code should be updated.
