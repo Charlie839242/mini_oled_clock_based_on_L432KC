@@ -6,7 +6,7 @@ The oled screen can display time, humidity and temperature on the basis of a mul
   5 things were used: L432KC, SHT30(Temeprature Sensor), ESP8266(WIFI modular), OLED screen(1306 driver), CH340(UART communication with computer)  
 	1.SHT30：  
 		SHT30 communicates through I2C. occupying the I2C1 on L432KC.  
-		That is, the sda of SHT30 connects to PB7(D4),scl connects to PB6(D5).  	
+		That is, the sda of SHT30 connects to PB7(D4),scl connects to PB6(D5).    	
 	2.CH340:  
 		CH340 occuplys UART1 on L432KC.  
 		That is, RXD connetcs to PA9(D1)，TXD connects to PA10(D0).  
