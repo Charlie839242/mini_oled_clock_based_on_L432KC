@@ -23,9 +23,12 @@ The oled screen can display time, humidity and temperature on the basis of a mul
     
 # How to use
   The 'application' folder is where codes are written.
+  
   Open the BSP folder by 'RT-Thread Studio'. To run it on your own L432KC or other things, there is one thing that should be modified before compiling and downloading.
+  
     1.Configure the ESP8266.
       Since a new WIFI is used, some information about the WIFI name and WIFI code should be updated.
       Click RT-Thread Settings. See tlhe packages and find "at_device". Go to the configuration of the "at_device" and you will the place to update the information.
+      
   Then compile and download it in L432KC.
   
