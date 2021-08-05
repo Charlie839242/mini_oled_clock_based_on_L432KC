@@ -16,6 +16,7 @@ The oled screen can display time, humidity and temperature on the basis of a mul
 	3.ESP8266：
 		ESP8266 communicates through UART，occupying the UART2 on L432KC.
 		That is, TXD connects to PA3(A2)，RXD connects to PA2(A7)。
+		
 	4.OLED screen：
 		OLED communicates through I2C，occupying the I2C3 on L432KC.
 		That is, sda connects to PB4(D12)，scl connects to PA7(A6).
