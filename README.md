@@ -7,15 +7,15 @@ The oled screen can display time, humidity and temperature on the basis of a mul
 	1.SHT30：
 		SHT30 communicates through I2C. occupying the I2C1 on L432KC.
 		That is, the sda of SHT30 connects to PB7(D4),scl connects to PB6(D5).  	
-	2.CH340:
+	2.CH340:  
 		CH340 occuplys UART1 on L432KC.
 		That is, RXD connetcs to PA9(D1)，TXD connects to PA10(D0).  
-	3.ESP8266：
+	3.ESP8266：  
 		ESP8266 communicates through UART，occupying the UART2 on L432KC.
 		That is, TXD connects to PA3(A2)，RXD connects to PA2(A7)。  
-	4.OLED screen：
+	4.OLED screen：  
 		OLED communicates through I2C，occupying the I2C3 on L432KC.
-		That is, sda connects to PB4(D12)，scl connects to PA7(A6).
+		That is, sda connects to PB4(D12)，scl connects to PA7(A6).  
     
 # How to use
   The 'application' folder is where codes are written.
